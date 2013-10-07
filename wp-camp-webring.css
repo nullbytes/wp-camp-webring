@@ -1,0 +1,35 @@
+.wp-camp-webring {
+	background-color: #2B507B;
+	padding: 1em 0;
+	text-align: center;
+	width: 100%;
+}
+.wp-camp-webring a {
+	color: #FFFFFF;
+	display: inline-block;
+	height: 2em;
+	line-height: 2em;
+}
+.wp-camp-webring a:hover {
+	color: #FFFFFF;
+}
+.wp-camp-webring a.wp-camp-webring-prev,
+.wp-camp-webring a.wp-camp-webring-next {
+	background-color: #333333;
+	border-radius: 2em;
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	display: block;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 1em;
+	overflow: hidden;
+	text-align: center;
+	text-decoration: none;
+	text-indent: -0.25em;
+	width: 2em;
+}
+.wp-camp-webring a.wp-camp-webring-next {
+	float: right;
+	text-indent: 0.25em;
+}

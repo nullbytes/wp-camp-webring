@@ -62,7 +62,7 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 			);
 			shuffle( $blogs );
 
-			?><a href="<?php echo $blogs[ 0 ];?>">&larr;</a> <a href="http://wpcamp.de/teilnehmerliste">WP Camp Webring</a> <a href="<?php echo $blogs[ 1 ];?>">&rarr;</a><?php
+			?><div class="wp-camp-webring"><a href="<?php echo $blogs[ 0 ];?>" class="wp-camp-webring-prev">&#9668;</a> <a href="http://wpcamp.de/teilnehmerliste" class="wp-camp-webring-list">WP Camp Webring</a> <a href="<?php echo $blogs[ 1 ];?>" class="wp-camp-webring-next">&#9658;</a></div><?php
 		}
 
 		public function load_style() {
