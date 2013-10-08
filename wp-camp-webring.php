@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:   WP Camp Webring
- * Description:   We do a webring of pages that are attending to the wpcamp in germany like it's 1997
+ * Description:   We do a webring of pages that are attending to the WP Camp in Germany like it's 1997
  * Version:       0.1
   */
 
@@ -16,8 +16,8 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 		 * Constructor, init on defined hooks of WP and include second class
 		 * 
 		 * @access  public
-		 * @since   0.0.1
-		 * @uses    add_filter, add_action
+		 * @since   0.1
+		 * @uses    add_filter
 		 * @return  void
 		 */
 		public function __construct() {
@@ -32,7 +32,7 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 		 * Handler for the action 'init'. Instantiates this class.
 		 * 
 		 * @access  public
-		 * @since   0.0.1
+		 * @since   0.1
 		 * @return  object $classobj
 		 */
 		public function get_object() {
@@ -49,7 +49,7 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 		 *
 		 * @since	0.1
 		 * @access	public
-		 * @uses	get_header
+		 * @uses	shuffle
 		 * @return	void
 		 */
 		public function display_webring() {
