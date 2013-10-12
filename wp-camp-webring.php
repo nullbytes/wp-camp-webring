@@ -63,8 +63,20 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 				'http://www.vcat.de',
 			);
 			shuffle( $blogs );
+			
+			$self_url = get_bloginfo( 'url' );
+			
+			$prev_blog = array_shift( $blogs );
+			
+			if( $prev_blog == $self_url)
+				$prev_blog = array_shift( $blogs );
+			
+			$next_blog = array_shift( $blogs );
+			
+			if( $next_blog == $self_url)
+				$next_blog = array_shift( $blogs );
 
-			?><div class="wp-camp-webring"><a href="<?php echo $blogs[ 0 ];?>" class="wp-camp-webring-prev">&#9668;</a> <a href="http://wpcamp.de/teilnehmerliste" class="wp-camp-webring-list">WP Camp Webring</a> <a href="<?php echo $blogs[ 1 ];?>" class="wp-camp-webring-next">&#9658;</a></div><?php
+			?><div class="wp-camp-webring"><a href="<?php echo $prev_blog; ?>" class="wp-camp-webring-prev">&#9668;</a> <a href="http://wpcamp.de/teilnehmerliste" class="wp-camp-webring-list">WP Camp Webring</a> <a href="<?php echo $next_blog; ?>" class="wp-camp-webring-next">&#9658;</a></div><?php
 		}
 
 		public function load_style() {
