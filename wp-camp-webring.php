@@ -2,25 +2,62 @@
 /**
  * Plugin Name:   WP Camp Webring
  * Description:   We do a webring of pages that are attending to the WP Camp in Germany like it's 1997
- * Version:       0.1
+ * Version:       0.2
   */
 
 if ( ! class_exists( 'wp_camp_webring' ) ) {
 	add_action( 'plugins_loaded', array( 'wp_camp_webring', 'get_object' ) );
 	
 	class wp_camp_webring {
-		
+
+		/**
+		 * The class object
+		 *
+		 * @static
+		 * @since  0.1
+		 * @var    string
+		 */		
 		static private $classobj = NULL;
+
+		/**
+		 * The linked elements table
+		 *
+		 * @since  0.1
+		 * @var    string
+		 */		
+		public $blogs = array();
+
+		/**
+		 * The linked elements table
+		 *
+		 * @since  0.1
+		 * @var    string
+		 */				
+		public $home_url = NULL;
 		
 		/**
 		 * Constructor, init on defined hooks of WP and include second class
 		 * 
 		 * @access  public
 		 * @since   0.1
-		 * @uses    add_filter
+		 * @uses    add_filter, home_url, shuffle
 		 * @return  void
 		 */
 		public function __construct() {
+			
+			$this->home_url = home_url();
+			
+			// set the blogs array and suffle it
+			$this->blogs = array(
+				'http://glueckpress.com',
+				'http://kau-boys.de',
+				'http://www.blogprofis.de/',
+				'http://webstreifen.de',
+				'http://www.camtasia-training.de',
+				'http://www.vcat.de',
+			);
+			
+			shuffle( $this->blogs );
 			
 			// show the webring in footer
 			add_filter( 'wp_footer', array( $this, 'display_webring' ) );
@@ -37,52 +74,55 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 		 */
 		public function get_object() {
 			
-			if ( NULL === self :: $classobj ) {
-				self :: $classobj = new self;
+			if ( NULL === self::$classobj ) {
+				self::$classobj = new self;
 			}
 			
-			return self :: $classobj;
+			return self::$classobj;
 		}
 
 		/**
 		 * display the webring and choose two random blogs
 		 *
-		 * @since	0.1
 		 * @access	public
-		 * @uses	shuffle
+		 * @since	0.1
+		 * @uses	get_blog_url
 		 * @return	void
 		 */
 		public function display_webring() {
 
-			$blogs = array(
-				'http://glueckpress.com',
-				'http://kau-boys.de',
-				'http://www.blogprofis.de/',
-				'http://webstreifen.de',
-				'http://www.camtasia-training.de',
-				'http://www.vcat.de',
-			);
-			
-			shuffle( $blogs );
-			
-			$home_url = home_url();
-			
-			$prev_blog = array_shift( $blogs );
-			
-			if( $prev_blog == $home_url )
-				$prev_blog = array_shift( $blogs );
-			
-			$next_blog = array_shift( $blogs );
-			
-			if( $next_blog == $home_url )
-				$next_blog = array_shift( $blogs );
-
-			?><div class="wp-camp-webring"><a href="<?php echo $prev_blog; ?>" class="wp-camp-webring-prev">&#9668;</a> <a href="http://wpcamp.de/teilnehmerliste" class="wp-camp-webring-list">WP Camp Webring</a> <a href="<?php echo $next_blog; ?>" class="wp-camp-webring-next">&#9658;</a></div><?php
+			?><div class="wp-camp-webring"><a href="<?php echo $this->get_blog_url(); ?>" class="wp-camp-webring-prev">&#9668;</a> <a href="http://wpcamp.de/teilnehmerliste" class="wp-camp-webring-list">WP Camp Webring</a> <a href="<?php echo $this->get_blog_url(); ?>" class="wp-camp-webring-next">&#9658;</a></div><?php
 		}
-
+		
+		/**
+		 * Load frontend CSS
+		 * 
+		 * @access  public
+		 * @since   0.1
+		 * @uses	get_blog_url
+		 * @return  void
+		 */
 		public function load_style() {
 
 			wp_enqueue_style( 'wp-camp-webring', plugins_url( 'wp-camp-webring.css', __FILE__ ) );
+		}
+		
+		/**
+		 * Get a blog URL from the blogs array excluding the blog matching the home_url
+		 * 
+		 * @access  public
+		 * @since   0.2
+		 * @uses	array_shift
+		 * @return  string $blog_url
+		 */
+		public function get_blog_url() {
+			
+			$blog_url = array_shift( $this->blogs );
+			
+			if ( $blog_url == $this->home_url )
+				$blog_url = array_shift( $this->blogs );
+			
+			return $blog_url;
 		}
 	} // end class
 } // end if class exists
