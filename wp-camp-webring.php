@@ -84,10 +84,10 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 		/**
 		 * display the webring and choose two random blogs
 		 *
-		 * @access	public
-		 * @since	0.1
-		 * @uses	get_blog_url
-		 * @return	void
+		 * @access  public
+		 * @since   0.1
+		 * @uses    get_blog_url
+		 * @return  void
 		 */
 		public function display_webring() {
 
@@ -99,7 +99,7 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 		 * 
 		 * @access  public
 		 * @since   0.1
-		 * @uses	get_blog_url
+		 * @uses    get_blog_url
 		 * @return  void
 		 */
 		public function load_style() {
@@ -112,7 +112,7 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 		 * 
 		 * @access  public
 		 * @since   0.2
-		 * @uses	array_shift
+		 * @uses    array_shift
 		 * @return  string $blog_url
 		 */
 		public function get_blog_url() {
