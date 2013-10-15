@@ -20,15 +20,15 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 		static private $classobj = NULL;
 
 		/**
-		 * The linked elements table
+		 * The array of the blogs participating in the webring
 		 *
 		 * @since  0.1
-		 * @var    string
+		 * @var    array
 		 */		
 		public $blogs = array();
 
 		/**
-		 * The linked elements table
+		 * The home_url of the blog
 		 *
 		 * @since  0.1
 		 * @var    string
