@@ -62,9 +62,10 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 				'http://www.camtasia-training.de',
 				'http://www.vcat.de',
 			);
+			
 			shuffle( $blogs );
 			
-			$self_url = get_bloginfo( 'url' );
+			$self_url = home_url();
 			
 			$prev_blog = array_shift( $blogs );
 			
