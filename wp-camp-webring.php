@@ -22,7 +22,7 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 		/**
 		 * The array of the blogs participating in the webring
 		 *
-		 * @since  0.1
+		 * @since  0.2
 		 * @var    array
 		 */		
 		public $blogs = array();
@@ -30,7 +30,7 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 		/**
 		 * The home_url of the blog
 		 *
-		 * @since  0.1
+		 * @since  0.2
 		 * @var    string
 		 */				
 		public $home_url = NULL;
