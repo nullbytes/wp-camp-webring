@@ -119,7 +119,7 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 			
 			$blog_url = array_shift( $this->blogs );
 			
-			if ( $blog_url == $this->home_url )
+			if ( parse_url( $blog_url, PHP_URL_HOST ) == parse_url( $this->home_url, PHP_URL_HOST ) )
 				$blog_url = array_shift( $this->blogs );
 			
 			return $blog_url;
