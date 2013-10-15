@@ -65,16 +65,16 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 			
 			shuffle( $blogs );
 			
-			$self_url = home_url();
+			$home_url = home_url();
 			
 			$prev_blog = array_shift( $blogs );
 			
-			if( $prev_blog == $self_url)
+			if( $prev_blog == $home_url )
 				$prev_blog = array_shift( $blogs );
 			
 			$next_blog = array_shift( $blogs );
 			
-			if( $next_blog == $self_url)
+			if( $next_blog == $home_url )
 				$next_blog = array_shift( $blogs );
 
 			?><div class="wp-camp-webring"><a href="<?php echo $prev_blog; ?>" class="wp-camp-webring-prev">&#9668;</a> <a href="http://wpcamp.de/teilnehmerliste" class="wp-camp-webring-list">WP Camp Webring</a> <a href="<?php echo $next_blog; ?>" class="wp-camp-webring-next">&#9658;</a></div><?php
