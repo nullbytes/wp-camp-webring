@@ -12,7 +12,7 @@ We want to start a webring of people who attend the wpcamp in germany. Like it's
 
 == Description ==
 
-On the way back from the WordCamp Europe we thought about the community of the WordCamp in Leiden. And the german community will also have a wpcamp this year. So we decided to start an interlink between the people who attend this event. And we choosed the idea of a [Webring](http://en.wikipedia.org/wiki/Webring/ "Wikipedia page for webring") because nobody used it currently and it is the eaiest way to get pages conntected. If you want to join go to the profile page at wpcamp and check the box "webring". You will then be included in one of the next updates of this plugin. 
+On the way back from the WordCamp Europe we thought about the community of the WordCamp in Leiden. And the german community will also have a wpcamp this year. So we decided to start an interlink between the people who attend this event. And we choosed the idea of a [Webring](http://en.wikipedia.org/wiki/Webring/ "Wikipedia page for webring") because nobody used it currently and it is the eaiest way to get pages conntected. If you want to join go to the profile page at wpcamp and fill out the field "Webring URL" which should be the WordPress blog you are using with the webring plugin. You will then be included in one of the next updates of this plugin. 
 
 == Installation ==
 
@@ -25,7 +25,7 @@ You will get the webring in the footer of your blog.
 
 = Wie kann ich mitmachen? =
 
-Wenn du am Webring teilnimmst kannst du in deinem Profil auf wpcamp.de die Aufnahme in den Webring anfordern. 
+Wenn du am Webring teilnimmst kannst du in [deinem Profil auf wpcamp.de](http://wpcamp.de/dein-profil/) die URL des Blog, der am Webring teilnehmen soll, in das neue Profilfeld "Webring URL" eintragen.
 
 == Changelog ==
 

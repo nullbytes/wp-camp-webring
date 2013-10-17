@@ -53,8 +53,9 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 				'http://dunkelangst.org',
 				'http://blog.drivingralle.de',
 				'http://stefankremer.de',
+				'http://hofmannsven.com',
 			);
-			
+
 			shuffle( $this->blogs );
 			
 			// show the webring in footer
