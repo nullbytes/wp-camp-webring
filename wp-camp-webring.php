@@ -49,11 +49,13 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 			
 			// set the blogs array and suffle it
 			$this->blogs = array(
-				'http://kau-boys.de',
-				'http://dunkelangst.org',
 				'http://blog.drivingralle.de',
-				'http://stefankremer.de',
+				'http://danielhuesken.de',
+				'http://dunkelangst.org/',
+				'http://easy-web-solutions.de',
 				'http://hofmannsven.com',
+				'http://kau-boys.de',
+				'http://stefankremer.de',
 			);
 
 			shuffle( $this->blogs );
