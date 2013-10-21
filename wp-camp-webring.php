@@ -56,6 +56,7 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 				'http://hofmannsven.com',
 				'http://kau-boys.de',
 				'http://stefankremer.de',
+				'http://www.besseronlineblog.de',
 			);
 
 			shuffle( $this->blogs );
