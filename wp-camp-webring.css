@@ -21,17 +21,17 @@
 	-moz-border-radius: 2em;
 	display: block;
 	float: left;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: times, serif
 	margin: 0 1em;
 	overflow: hidden;
 	text-align: center;
 	text-decoration: none;
-	text-indent: -0.25em;
+	text-indent: -0.15em;
 	width: 2em;
 }
 .wp-camp-webring a.wp-camp-webring-next {
 	float: right;
-	text-indent: 0.25em;
+	text-indent: 0.15em;
 }
 
 /* hide the WP Stats icon to place the webring bar at the very bottom of the page */
