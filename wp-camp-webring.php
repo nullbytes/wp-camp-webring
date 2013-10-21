@@ -2,7 +2,7 @@
 /**
  * Plugin Name:   WP Camp Webring
  * Description:   We do a webring of pages that are attending to the WP Camp in Germany like it's 1997
- * Version:       0.3
+ * Version:       0.3.2
   */
 
 if ( ! class_exists( 'wp_camp_webring' ) ) {
@@ -51,8 +51,9 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 			$this->blogs = array(
 				'http://blog.drivingralle.de',
 				'http://danielhuesken.de',
-				'http://dunkelangst.org/',
+				'http://dunkelangst.org',
 				'http://easy-web-solutions.de',
+				'http://heikomamerow.de',
 				'http://hofmannsven.com',
 				'http://kau-boys.de',
 				'http://stefankremer.de',

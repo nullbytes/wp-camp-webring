@@ -4,7 +4,7 @@ Plugin
 Tags: comments, spam
 Requires at least: 3.0
 Tested up to: 3.6.1
-Stable tag: 0.3
+Stable tag: 0.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,16 @@ You will get the webring in the footer of your blog.
 Wenn du am Webring teilnimmst kannst du in [deinem Profil auf wpcamp.de](http://wpcamp.de/dein-profil/) die URL des Blog, der am Webring teilnehmen soll, in das neue Profilfeld "Webring URL" eintragen.
 
 == Changelog ==
+
+= 0.3.2 =
+* using times for font-family as arial, helvetica is not showing the left arrow in Chrome on Android and iOS
+* adding new URLs
+
+= 0.3.1 =
+* adding new URLs
+
+= 0.3 =
+* First stable release in the WordPress SVN repository
 
 = 0.2 =
 * several changes to improve performace
