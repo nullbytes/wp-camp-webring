@@ -10,7 +10,8 @@
 	height: 2em;
 	line-height: 2em;
 }
-.wp-camp-webring a:hover {
+.wp-camp-webring a:hover,
+.wp-camp-webring a:visited {
 	color: #FFFFFF;
 }
 .wp-camp-webring a.wp-camp-webring-prev,
