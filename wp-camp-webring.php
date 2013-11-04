@@ -61,7 +61,6 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 				'http://stefankremer.de',
 				'http://www.atelier-leonhardt.com',
 				'http://www.besseronlineblog.de',
-				'http://www.opas-blog.de',
 			);
 
 			shuffle( $this->blogs );
