@@ -51,16 +51,22 @@ if ( ! class_exists( 'wp_camp_webring' ) ) {
 			$this->blogs = array(
 				'http://blog.drivingralle.de',
 				'http://danielhuesken.de',
-				'http://deckerweb.de/',
-				'http://dunkelangst.org/',
+				'http://deckerweb.de',
+				'http://dunkelangst.org',
 				'http://heikomamerow.de',
 				'http://hofmannsven.com',
-				'http://janreimers.net',
+				#'http://janreimers.net',
 				'http://kau-boys.de',
 				'http://n1da.net',
+				#'http://pixelmagic.eu/blog/',
+				#'http://rottig.de',
 				'http://stefankremer.de',
+				'http://wpmeetup-berlin.de',
+				#'http://wpmeetup-hamburg.de',
 				'http://www.atelier-leonhardt.com',
 				'http://www.besseronlineblog.de',
+				'http://www.keksbox.com/microblog/',
+				#'http://www.opas-blog.de',
 			);
 
 			shuffle( $this->blogs );
