@@ -2,7 +2,7 @@
 /**
  * Plugin Name:   WP Camp Webring
  * Description:   We do a webring of pages that are attending to the WP Camp in Germany like it's 1997
- * Version:       0.3.8
+ * Version:       0.3.10
   */
 
 if ( ! class_exists( 'wp_camp_webring' ) ) {
